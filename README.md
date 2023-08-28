@@ -1,9 +1,9 @@
-## 👋  template config files 🚀  
+## 👋  registry config files 🚀  
 
 ### Install
   
 ```shell
-bash -c "$(curl -q -LSsf "https://github.com/templatemgr/template/raw/main/install.sh")"
+bash -c "$(curl -q -LSsf "https://github.com/templatemgr/registry/raw/main/install.sh")"
 ```
   
 ## Author  
