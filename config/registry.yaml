@@ -11,7 +11,7 @@ storage:
   cache:
     blobdescriptor: inmemory
   filesystem:
-    rootdirectory: /data/registry
+    rootdirectory: REPLACE_DATA_DIR
 ################
 http:
   addr: :5000
@@ -30,7 +30,8 @@ http:
   headers:
     X-Content-Type-Options: [nosniff]
     Access-Control-Max-Age: [1728000]
-    Access-Control-Allow-Origin: ['*']
+    Access-Control-Allow-Origin:
+      ['*']
       #Access-Control-Allow-Credentials: [true]
       #Access-Control-Allow-Headers: ['Authorization', 'Accept']
       #Access-Control-Expose-Headers: ['Docker-Content-Digest']
@@ -108,7 +109,7 @@ health:
     interval: 10s
     threshold: 3
   file:
-    - file: /config/docker/registry.yaml
+    - file: REPLACE_CONF_DIR/registry.yaml
       interval: 10s
   # http:
   #   - uri: http://server.to.check/must/return/200
@@ -131,7 +132,7 @@ health:
 ################
 compatibility:
   schema1:
-    # signingkeyfile: /etc/registry/key.json
+    # signingkeyfile: REPLACE_ETC_DIR/key.json
     enabled: true
 ################
 # validation:
@@ -141,4 +142,3 @@ compatibility:
 #   - ^https?://([^/]+\.)*example\.com/
 # deny:
 #   - ^https?://www\.example\.com/
-
